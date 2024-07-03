@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,300&display=swap');
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* #0c356a */
+
+body {
+    height: 100vh;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header nav {
+    background-color: whitesmoke;
+    color: #0c356a;
+    padding: 15px;
+    box-shadow: 5px 6px 3px #0c356a1c;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    /* Menghilangkan garis bawah dari tautan */
+    color: inherit;
+    /* Warisan warna teks dari parent (jika ada) */
+    display: flex;
+    align-items: center;
+}
+
+.logo .logo-text {
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.logo-img {
+    width: 45px;
+    /* Sesuaikan ukuran logo sesuai kebutuhan */
+    height: auto;
+    margin-right: 10px;
+    /* Atur margin sesuai kebutuhan */
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar-links a {
+    color: #0c356a;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+
+.navbar-links a:hover {
+    background-color: #0c356a;
+    color: whitesmoke;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #0c356a;
+    margin: 3px 0;
+}
+
+#content {
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#sambutan {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 3rem;
+}
+
+#sambutan figure img {
+    width: 15rem;
+}
+
+#sambutan figure {
+    text-align: center;
+}
+
+#sambutan figure figcaption {
+    /* font-size: large; */
+    font-weight: bold;
+}
+
+#sambutan .keterangan p {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: medium;
+}
+
+.btn-hero {
+    width: 160px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-hero:hover {
+    background-position: 100% 0;
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-hero:focus {
+    outline: none;
+}
+
+.btn-hero {
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+
+main {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+#pengumuman {
+    padding: 3rem;
+    background-color: whitesmoke;
+}
+
+#pengumuman .list-pengumuman {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#pengumuman .list-pengumuman .card h4 {
+    margin: 1rem 1rem 1rem 0;
+}
+
+.featured-image {
+    width: 50%;
+}
+
+aside {
+    flex: 1.5;
+}
+
+.profile {
+    background-color: whitesmoke;
+    padding: 1.5rem;
+}
+
+.profile header {
+    text-align: center;
+}
+
+#berita section {
+    display: flex;
+    padding: 1rem;
+    margin-bottom: -1rem;
+}
+
+#berita header {
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: -1rem;
+}
+
+#berita section a {
+    text-decoration: none;
+    color: black;
+}
+
+.card-berita {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.card-berita img {
+    width: 6rem;
+}
+
+footer {
+    min-height: 5rem;
+    padding: 2rem;
+    color: white;
+    background-color: #0c356a;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: whitesmoke;
+        text-align: start;
+        padding: 1rem;
+    }
+    .navbar-links a {
+        padding: 15px;
+        display: block;
+        border-radius: 0.5rem;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    main {
+        flex-flow: column nowrap;
+    }
+    #sambutan {
+        flex-flow: column nowrap;
+    }
+    #pengumuman .list-pengumuman {
+        flex-flow: column nowrap;
+    }
+    main aside {
+        align-self: center;
+    }
+}
